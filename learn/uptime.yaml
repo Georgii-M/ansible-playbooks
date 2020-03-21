@@ -1,0 +1,18 @@
+---
+
+ - name: Show servers uptime and distribution name
+   hosts: all
+   tasks:
+
+#    - name: Show distribution name
+#      debug:
+#       var: ansible_os_family
+
+    - name: Show system uptime
+      shell: uptime
+      register: uptime_results
+
+    - set_fact: uptime_report="System {{ ansible_os_family }} uptime is {{ uptime_results.stdout }}"
+
+    - debug:
+        var: uptime_report
