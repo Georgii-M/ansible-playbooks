@@ -14,5 +14,4 @@
 
     - set_fact: uptime_report="System {{ ansible_os_family }} uptime is {{ uptime_results.stdout }}"
 
-    - debug:
-        var: uptime_report
+    - debug: var=uptime_report
