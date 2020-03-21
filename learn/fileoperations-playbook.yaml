@@ -1,0 +1,9 @@
+-
+  name: Touch file
+  hosts: localhost
+  tasks:
+    - name: Touch file in /opt folder
+      command: touch /opt/file1
+    
+    - name: Notify about completion
+      command: echo The task is completed > /opt/completed.txt

@@ -1,0 +1,13 @@
+-
+  name: Play1
+  hosts: target1
+  tasks:
+    - name: Show hostname
+      command: "cat /etc/hostname"
+
+-
+  name: Play2
+  hosts: target2
+  tasks:
+    - name: Show sshd status
+      command: systemctl status sshd
